@@ -2232,7 +2232,7 @@
   
     <li class="md-nav__item">
       <a href="Multi_MCU_Homing.html" class="md-nav__link">
-        多微控制器复位与探测
+        多微控制器归位与探高
       </a>
     </li>
   
@@ -4070,7 +4070,7 @@
 <p>Klipper支持以下标准的G-Code命令：</p>
 <ul>
 <li>移动 (G0 or G1): <code>G1 [X&lt;pos&gt;] [Y&lt;pos&gt;] [Z&lt;pos&gt;] [E&lt;pos&gt;] [F&lt;speed&gt;]</code></li>
-<li>停留时间：<code>G4 P&lt;milliseconds&gt;</code></li>
+<li>驻留：<code>G4 P&lt;毫秒&gt;</code></li>
 <li>返回原点：<code>G28 [X] [Y] [Z]</code></li>
 <li>关闭步进电机：<code>M18</code>或<code>M84</code></li>
 <li>等待当前移动完成： <code>M400</code></li>
@@ -4212,7 +4212,7 @@
 <p>The following standard G-Code commands are available when the <a href="Config_Reference.html#firmware_retraction">firmware_retraction config section</a> is enabled. These commands allow you to utilize the firmware retraction feature available in many slicers, to reduce stringing during non-extrusion moves from one part of the print to another. Appropriately configuring pressure advance reduces the length of retraction required.</p>
 <ul>
 <li><code>G10</code>：使用当前配置的参数回抽挤出机。</li>
-<li><code>G11</code>：不使用当前配置的参数回抽挤出机。</li>
+<li><code>G11</code>：使用当前配置的参数回填挤出机。</li>
 </ul>
 <p>还可以使用以下额外命令：</p>
 <h4 id="set_retraction">SET_RETRACTION<a class="headerlink" href="#set_retraction" title="Permanent link">&para;</a></h4>

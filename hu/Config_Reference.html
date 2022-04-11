@@ -509,11 +509,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-kinematic-settings" class="md-nav__link">
-    Common kinematic settings
+  <a href="#kozos-kinematikai-beallitasok" class="md-nav__link">
+    Közös kinematikai beállítások
   </a>
   
-    <nav class="md-nav" aria-label="Common kinematic settings">
+    <nav class="md-nav" aria-label="Közös kinematikai beállítások">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -531,36 +531,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cartesian-kinematics" class="md-nav__link">
-    Cartesian Kinematics
+  <a href="#cartesian-kinematika" class="md-nav__link">
+    Cartesian Kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linear-delta-kinematics" class="md-nav__link">
-    Linear Delta Kinematics
+  <a href="#linearis-delta-kinematika" class="md-nav__link">
+    Lineáris delta kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#corexy-kinematics" class="md-nav__link">
-    CoreXY Kinematics
+  <a href="#corexy-kinematika" class="md-nav__link">
+    CoreXY Kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#corexz-kinematics" class="md-nav__link">
-    CoreXZ Kinematics
+  <a href="#corexz-kinematika" class="md-nav__link">
+    CoreXZ Kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hybrid-corexy-kinematics" class="md-nav__link">
-    Hybrid-CoreXY Kinematics
+  <a href="#hybrid-corexy-kinematika" class="md-nav__link">
+    Hybrid-CoreXY Kinematika
   </a>
   
 </li>
@@ -1895,7 +1895,7 @@
   
     <li class="md-nav__item">
       <a href="Status_Reference.html" class="md-nav__link">
-        Status reference
+        Állapot referencia
       </a>
     </li>
   
@@ -2366,11 +2366,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-kinematic-settings" class="md-nav__link">
-    Common kinematic settings
+  <a href="#kozos-kinematikai-beallitasok" class="md-nav__link">
+    Közös kinematikai beállítások
   </a>
   
-    <nav class="md-nav" aria-label="Common kinematic settings">
+    <nav class="md-nav" aria-label="Közös kinematikai beállítások">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2388,36 +2388,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cartesian-kinematics" class="md-nav__link">
-    Cartesian Kinematics
+  <a href="#cartesian-kinematika" class="md-nav__link">
+    Cartesian Kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linear-delta-kinematics" class="md-nav__link">
-    Linear Delta Kinematics
+  <a href="#linearis-delta-kinematika" class="md-nav__link">
+    Lineáris delta kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#corexy-kinematics" class="md-nav__link">
-    CoreXY Kinematics
+  <a href="#corexy-kinematika" class="md-nav__link">
+    CoreXY Kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#corexz-kinematics" class="md-nav__link">
-    CoreXZ Kinematics
+  <a href="#corexz-kinematika" class="md-nav__link">
+    CoreXZ Kinematika
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hybrid-corexy-kinematics" class="md-nav__link">
-    Hybrid-CoreXY Kinematics
+  <a href="#hybrid-corexy-kinematika" class="md-nav__link">
+    Hybrid-CoreXY Kinematika
   </a>
   
 </li>
@@ -3503,9 +3503,9 @@ serial:
 # See the &quot;mcu&quot; section for configuration parameters.
 </code></pre></div>
 
-<h2 id="common-kinematic-settings">Common kinematic settings<a class="headerlink" href="#common-kinematic-settings" title="Permanent link">&para;</a></h2>
+<h2 id="kozos-kinematikai-beallitasok">Közös kinematikai beállítások<a class="headerlink" href="#kozos-kinematikai-beallitasok" title="Permanent link">&para;</a></h2>
 <h3 id="printer">[printer]<a class="headerlink" href="#printer" title="Permanent link">&para;</a></h3>
-<p>The printer section controls high level printer settings.</p>
+<p>A nyomtató szakasz a nyomtató magas szintű beállításait vezérli.</p>
 <div class="highlight"><pre><span></span><code>[printer]
 kinematics:
 #   The type of printer in use. This option may be one of: cartesian,
@@ -3537,7 +3537,7 @@ max_accel:
 </code></pre></div>
 
 <h3 id="stepper">[stepper]<a class="headerlink" href="#stepper" title="Permanent link">&para;</a></h3>
-<p>Stepper motor definitions. Different printer types (as specified by the "kinematics" option in the [printer] config section) require different names for the stepper (eg, <code>stepper_x</code> vs <code>stepper_a</code>). Below are common stepper definitions.</p>
+<p>Léptetőmotor meghatározások. A különböző nyomtatótípusok (a [printer] config szakasz "kinematika" opciója által meghatározottak szerint) eltérő neveket igényelnek a léptető számára (pl. <code>stepper_x</code> vs <code>stepper_a</code>). Az alábbiakban a stepperek általános definíciói következnek.</p>
 <p>See the <a href="Rotation_Distance.html">rotation distance document</a> for information on calculating the <code>rotation_distance</code> parameter. See the <a href="Multi_MCU_Homing.html">Multi-MCU homing</a> document for information on homing using multiple micro-controllers.</p>
 <div class="highlight"><pre><span></span><code>[stepper_x]
 step_pin:
@@ -3612,9 +3612,9 @@ position_max:
 #   if near position_min.
 </code></pre></div>
 
-<h3 id="cartesian-kinematics">Cartesian Kinematics<a class="headerlink" href="#cartesian-kinematics" title="Permanent link">&para;</a></h3>
-<p>See <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-cartesian.cfg">example-cartesian.cfg</a> for an example cartesian kinematics config file.</p>
-<p>Only parameters specific to cartesian printers are described here - see <a href="#common-kinematic-settings">common kinematic settings</a> for available parameters.</p>
+<h3 id="cartesian-kinematika">Cartesian Kinematika<a class="headerlink" href="#cartesian-kinematika" title="Permanent link">&para;</a></h3>
+<p>Lásd <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-cartesian.cfg">example-cartesian.cfg</a> egy példa cartesian kinematika konfigurációs fájlhoz.</p>
+<p>Itt csak a cartesian nyomtatókra jellemző paraméterek kerülnek leírásra. A rendelkezésre álló paramétereket lásd a <a href="#common-kinematic-settings">általános kinematikai beállítások</a> pontban.</p>
 <div class="highlight"><pre><span></span><code>[printer]
 kinematics: cartesian
 max_z_velocity:
@@ -3640,9 +3640,9 @@ max_z_accel:
 [stepper_z]
 </code></pre></div>
 
-<h3 id="linear-delta-kinematics">Linear Delta Kinematics<a class="headerlink" href="#linear-delta-kinematics" title="Permanent link">&para;</a></h3>
-<p>See <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-delta.cfg">example-delta.cfg</a> for an example linear delta kinematics config file. See the <a href="Delta_Calibrate.html">delta calibrate guide</a> for information on calibration.</p>
-<p>Only parameters specific to linear delta printers are described here - see <a href="#common-kinematic-settings">common kinematic settings</a> for available parameters.</p>
+<h3 id="linearis-delta-kinematika">Lineáris delta kinematika<a class="headerlink" href="#linearis-delta-kinematika" title="Permanent link">&para;</a></h3>
+<p>Lásd az <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-delta.cfg">example-delta.cfg</a> példát a lineáris delta kinematika konfigurációs fájljához. A kalibrálással kapcsolatos információkért lásd a <a href="Delta_Calibrate.html">delta kalibrációs útmutató</a> dokumentumot.</p>
+<p>Itt csak a lineáris delta nyomtatókra jellemző paraméterek kerülnek leírásra. A rendelkezésre álló paramétereket lásd az <a href="#common-kinematic-settings">általános kinematikai beállítások</a> pontban.</p>
 <div class="highlight"><pre><span></span><code>[printer]
 kinematics: delta
 max_z_velocity:
@@ -3717,9 +3717,9 @@ radius:
 #   just prior to starting a probe operation. The default is 5.
 </code></pre></div>
 
-<h3 id="corexy-kinematics">CoreXY Kinematics<a class="headerlink" href="#corexy-kinematics" title="Permanent link">&para;</a></h3>
-<p>See <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-corexy.cfg">example-corexy.cfg</a> for an example corexy (and h-bot) kinematics file.</p>
-<p>Only parameters specific to corexy printers are described here - see <a href="#common-kinematic-settings">common kinematic settings</a> for available parameters.</p>
+<h3 id="corexy-kinematika">CoreXY Kinematika<a class="headerlink" href="#corexy-kinematika" title="Permanent link">&para;</a></h3>
+<p>Lásd <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-corexy.cfg">example-corexy.cfg</a> egy példa corexy (és h-bot) kinematikai fájlt.</p>
+<p>Itt csak a CoreXY nyomtatókra jellemző paraméterek kerülnek leírásra. A rendelkezésre álló paramétereket lásd az <a href="#common-kinematic-settings">általános kinematikai beállítások</a> pontban.</p>
 <div class="highlight"><pre><span></span><code>[printer]
 kinematics: corexy
 max_z_velocity:
@@ -3745,9 +3745,9 @@ max_z_accel:
 [stepper_z]
 </code></pre></div>
 
-<h3 id="corexz-kinematics">CoreXZ Kinematics<a class="headerlink" href="#corexz-kinematics" title="Permanent link">&para;</a></h3>
-<p>See <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-corexz.cfg">example-corexz.cfg</a> for an example corexz kinematics config file.</p>
-<p>Only parameters specific to corexz printers are described here - see <a href="#common-kinematic-settings">common kinematic settings</a> for available parameters.</p>
+<h3 id="corexz-kinematika">CoreXZ Kinematika<a class="headerlink" href="#corexz-kinematika" title="Permanent link">&para;</a></h3>
+<p>Lásd <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-corexz.cfg">example-corexz.cfg</a> egy példa CoreXZ kinematikai konfigurációs fájlhoz.</p>
+<p>Itt csak a CoreXZ nyomtatókra jellemző paraméterek kerülnek leírásra. A rendelkezésre álló paramétereket lásd az <a href="#common-kinematic-settings">általános kinematikai beállítások</a> pontban.</p>
 <div class="highlight"><pre><span></span><code>[printer]
 kinematics: corexz
 max_z_velocity:
@@ -3770,7 +3770,7 @@ max_z_accel:
 [stepper_z]
 </code></pre></div>
 
-<h3 id="hybrid-corexy-kinematics">Hybrid-CoreXY Kinematics<a class="headerlink" href="#hybrid-corexy-kinematics" title="Permanent link">&para;</a></h3>
+<h3 id="hybrid-corexy-kinematika">Hybrid-CoreXY Kinematika<a class="headerlink" href="#hybrid-corexy-kinematika" title="Permanent link">&para;</a></h3>
 <p>See <a href="https://github.com/Klipper3d/klipper/blob/master/config/example-hybrid-corexy.cfg">example-hybrid-corexy.cfg</a> for an example hybrid corexy kinematics config file.</p>
 <p>This kinematic is also known as Markforged kinematic.</p>
 <p>Only parameters specific to hybrid corexy printers are described here see <a href="#common-kinematic-settings">common kinematic settings</a> for available parameters.</p>

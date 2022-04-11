@@ -853,7 +853,7 @@
   
     <li class="md-nav__item">
       <a href="Multi_MCU_Homing.html" class="md-nav__link">
-        多微控制器复位与探测
+        多微控制器归位与探高
       </a>
     </li>
   
@@ -1307,18 +1307,18 @@
 
 
 <h1 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>本教程假定软件将会在树莓派上和 Octoprint 一起运行。推荐使用树莓派2/3/4作为主机（关于其他设备，请见<a href="FAQ.html#can-i-run-klipper-on-something-other-than-a-raspberry-pi-3">常见问题</a>）。</p>
+<p>本教程假定软件将会在树莓派上和 Octoprint 一起运行。推荐使用树莓派2/3/4作为主机（关于其他设备，请见<a href="FAQ.html#我可以在-Raspberry-Pi-3-以外的其他设备上运行-Klipper-吗？">常见问题</a>）。</p>
 <p>Klipper 目前支持多种基于 Atmel ATmega 微控制器、<a href="Features.html#step-benchmarks">基于 ARM 微控制器</a> 和基于 <a href="Beaglebone.html">Beaglebone 可编程实时单元</a> 的打印机。</p>
 <h2 id="_2">准备操作系统镜像<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>先在树莓派上安装 <a href="https://github.com/guysoft/OctoPi">OctoPi</a>。请使用OctoPi v0.17.0或更高版本，查看 <a href="https://github.com/guysoft/OctoPi/releases">Octopi 发行版</a>来获取最新发布版本。安装完系统后，请先验证 OctoPi 能正常启动，并且 OctoPrint 网络服务器正常运行。连接到 OctoPrint 网页后，按照提示将 OctoPrint 更新到v1.4.2或更高版本。</p>
-<p>在安装 OctoPi 和升级 OctoPrint后，用 ssh 进入目标设备，以运行少量的系统命令。如果使用Linux或MacOS系统，那么 "ssh"软件应该已经预装在系统上。有一些免费的ssh客户端可用于其他操作系统（例如，<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>）。使用ssh工具连接到Raspberry Pi（ssh pi@octopi --密码是 "raspberry"），并运行以下命令：</p>
+<p>在安装 OctoPi 和升级 OctoPrint 后，用 ssh 连接目标设备，以运行少量的系统命令。如果使用Linux或MacOS系统，那么 "ssh"软件应该已经预装在系统上。有一些免费的ssh客户端可用于其他操作系统（例如，<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>）。使用ssh工具连接到Raspberry Pi（ssh pi@octopi --密码是 "raspberry"），并运行以下命令：</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/Klipper3d/klipper
 ./klipper/scripts/install-octopi.sh
 </code></pre></div>
 
 <p>以上将会下载 Klipper 、安装一些系统依赖、设置 Klipper 在系统启动时运行并启动Klipper 主机程序。这将需要互联网连接以及可能需要几分钟时间才能完成。</p>
 <h2 id="_3">构建和刷写微控制器<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>在编译微控制器代码之前，首先在树莓派上运行这些命令：</p>
+<p>在编译微控制器代码之前，先在树莓派上运行这些命令：</p>
 <div class="highlight"><pre><span></span><code>cd ~/klipper/
 make menuconfig
 </code></pre></div>
@@ -1368,7 +1368,7 @@ serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
 <p>在创建和编辑该文件后，有必要在OctoPrint网络终端发出 "restart"命令去重新加载config。"status" 命令将报告打印机已准备就绪。在初始设置期间出现配置错误是很正常的。更新打印机配置文件并发出 "restart"命令，直到 "状态 "报告打印机已准备就绪。</p>
 <p>Klipper通过OctoPrint终端标签报告错误信息。可以使用 "status "命令来重新报告错误信息。默认的Klipper启动脚本也在<strong>/tmp/klippy.log</strong>中放置一个日志，提供更详细的信息。</p>
 <p>除此之外常见的g-code命令之外，Klipper还支持一些扩展命令"status "和 "restart "就是这些命令的例子。使用 "help "命令可以获得其他扩展命令的列表。</p>
-<p>在Klipper反馈打印机已经准备好后，进入<a href="Config_checks.html">config check document</a>对配置文件中的引脚定义进行一些基本检查。</p>
+<p>在Klipper反馈打印机已经准备好后，进入<a href="Config_checks.html">配置检查文档</a>对配置文件中的引脚定义进行一些基本检查。</p>
 <h2 id="_4">联系开发者<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>请务必查看<a href="FAQ.html">FAQ</a>，了解一些常见问题的答案。请参阅<a href="Contact.html">联系页面</a>来报告一个错误或联系开发者。</p>
 
