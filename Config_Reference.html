@@ -826,6 +826,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exclude_object" class="md-nav__link">
+    [exclude_object]
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1978,6 +1985,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Using_PWM_Tools.html" class="md-nav__link">
         Using PWM tools
       </a>
@@ -2686,6 +2707,13 @@
           <li class="md-nav__item">
   <a href="#respond" class="md-nav__link">
     [respond]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude_object" class="md-nav__link">
+    [exclude_object]
   </a>
   
 </li>
@@ -4523,9 +4551,9 @@ home_xy_position:
 #   than z_hop, then this will lift the head to a height of z_hop. If
 #   the Z axis is not already homed the head is lifted by z_hop.
 #   The default is to not implement Z hop.
-#z_hop_speed: 20.0
+#z_hop_speed: 15.0
 #   Speed (in mm/s) at which the Z axis is lifted prior to homing. The
-#   default is 20mm/s.
+#   default is 15 mm/s.
 #move_to_previous: False
 #   When set to True, the X and Y axes are reset to their previous
 #   positions after Z axis homing. The default is False.
@@ -4679,6 +4707,8 @@ path:
 #   are not supported). One may point this to OctoPrint&#39;s upload
 #   directory (generally ~/.octoprint/uploads/ ). This parameter must
 #   be provided.
+#on_error_gcode:
+#   A list of G-Code commands to execute when an error is reported.
 </code></pre></div>
 
 <h3 id="sdcard_loop">[sdcard_loop]<a class="headerlink" href="#sdcard_loop" title="Permanent link">&para;</a></h3>
@@ -4756,6 +4786,17 @@ allowing per-filament settings and runtime tuning.</p>
 #default_prefix: echo:
 #   Directly sets the default prefix. If present, this value will
 #   override the &quot;default_type&quot;.
+</code></pre></div>
+
+<h3 id="exclude_object">[exclude_object]<a class="headerlink" href="#exclude_object" title="Permanent link">&para;</a></h3>
+<p>Enables support to exclude or cancel individual objects during the printing
+process.</p>
+<p>See the <a href="Exclude_Object.html">exclude objects guide</a> and
+<a href="G-Codes.html#excludeobject">command reference</a>
+for additional information. See the
+<a href="https://github.com/Klipper3d/klipper/blob/master/config/sample-macros.cfg">sample-macros.cfg</a> file for a
+Marlin/RepRapFirmware compatible M486 G-Code macro.</p>
+<div class="highlight"><pre><span></span><code>[exclude_object]
 </code></pre></div>
 
 <h2 id="resonance-compensation">Resonance compensation<a class="headerlink" href="#resonance-compensation" title="Permanent link">&para;</a></h2>
