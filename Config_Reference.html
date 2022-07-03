@@ -861,6 +861,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#mpu9250" class="md-nav__link">
+    [mpu9250]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#resonance_tester" class="md-nav__link">
     [resonance_tester]
   </a>
@@ -2741,6 +2748,13 @@
           <li class="md-nav__item">
   <a href="#adxl345" class="md-nav__link">
     [adxl345]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpu9250" class="md-nav__link">
+    [mpu9250]
   </a>
   
 </li>
@@ -4873,6 +4887,21 @@ cs_pin:
 #   not recommended to change this rate from the default 3200, and
 #   rates below 800 will considerably affect the quality of resonance
 #   measurements.
+</code></pre></div>
+
+<h3 id="mpu9250">[mpu9250]<a class="headerlink" href="#mpu9250" title="Permanent link">&para;</a></h3>
+<p>Support for mpu9250 and mpu6050 accelerometers (one may define any
+number of sections with an "mpu9250" prefix).</p>
+<div class="highlight"><pre><span></span><code>[mpu9250 my_accelerometer]
+#i2c_address:
+#   Default is 104 (0x68).
+#i2c_mcu:
+#i2c_bus:
+#i2c_speed: 400000
+#   See the &quot;common I2C settings&quot; section for a description of the
+#   above parameters. The default &quot;i2c_speed&quot; is 400000.
+#axes_map: x, y, z
+#   See the &quot;adxl345&quot; section for information on this parameter.
 </code></pre></div>
 
 <h3 id="resonance_tester">[resonance_tester]<a class="headerlink" href="#resonance_tester" title="Permanent link">&para;</a></h3>
@@ -7287,6 +7316,20 @@ SPI bus.</p>
 <h3 id="common-i2c-settings">Common I2C settings<a class="headerlink" href="#common-i2c-settings" title="Permanent link">&para;</a></h3>
 <p>The following parameters are generally available for devices using an
 I2C bus.</p>
+<p>Note that Klipper's current micro-controller support for i2c is
+generally not tolerant to line noise. Unexpected errors on the i2c
+wires may result in Klipper raising a run-time error. Klipper's
+support for error recovery varies between each micro-controller type.
+It is generally recommended to only use i2c devices that are on the
+same printed circuit board as the micro-controller.</p>
+<p>Most Klipper micro-controller implementations only support an
+<code>i2c_speed</code> of 100000. The Klipper "linux" micro-controller supports a
+400000 speed, but it must be
+<a href="RPi_microcontroller.html#optional-enabling-i2c">set in the operating system</a>
+and the <code>i2c_speed</code> parameter is otherwise ignored. The Klipper
+"rp2040" micro-controller supports a rate of 400000 via the
+<code>i2c_speed</code> parameter. All other Klipper micro-controllers use a
+100000 rate and ignore the <code>i2c_speed</code> parameter.</p>
 <div class="highlight"><pre><span></span><code>#i2c_address:
 #   The i2c address of the device. This must specified as a decimal
 #   number (not in hex). The default depends on the type of device.
@@ -7299,8 +7342,9 @@ I2C bus.</p>
 #   the type of micro-controller.
 #i2c_speed:
 #   The I2C speed (in Hz) to use when communicating with the device.
-#   On some micro-controllers changing this value has no effect. The
-#   default is 100000.
+#   The Klipper implementation on most micro-controllers is hard-coded
+#   to 100000 and changing this value has no effect. The default is
+#   100000.
 </code></pre></div>
 
               
