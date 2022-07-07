@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -13,7 +13,7 @@
     
     
       
-        <title>概述 - Klipper 文档</title>
+        <title>Dockable Probe - Klipper documentation</title>
       
     
     
@@ -74,8 +74,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          跳转至
+        <a href="#basic-configuration" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -87,8 +87,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Klipper 文档" class="md-header__button md-logo" aria-label="Klipper 文档" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Klipper documentation" class="md-header__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
       
   <img src="img/klipper.svg" alt="logo">
 
@@ -100,13 +100,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Klipper 文档
+            Klipper documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              Dockable Probe
             
           </span>
         </div>
@@ -139,7 +139,7 @@
       <div class="md-header__option">
         <div class="md-select">
           
-          <button class="md-header__button md-icon" aria-label="选择当前语言">
+          <button class="md-header__button md-icon" aria-label="Select language">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
           </button>
           <div class="md-select__inner">
@@ -182,18 +182,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
@@ -205,7 +205,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -216,7 +216,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/Klipper3d/klipper/" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -249,18 +249,18 @@
                     
 
 
-<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Klipper 文档" class="md-nav__button md-logo" aria-label="Klipper 文档" data-md-component="logo">
+    <a href="." title="Klipper documentation" class="md-nav__button md-logo" aria-label="Klipper documentation" data-md-component="logo">
       
   <img src="img/klipper.svg" alt="logo">
 
     </a>
-    Klipper 文档
+    Klipper documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Klipper3d/klipper/" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -279,73 +279,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          概述
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Overview.html" class="md-nav__link md-nav__link--active">
-        概述
+    <li class="md-nav__item">
+      <a href="Overview.html" class="md-nav__link">
+        Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -359,7 +297,7 @@
   
     <li class="md-nav__item">
       <a href="Features.html" class="md-nav__link">
-        功能
+        Features
       </a>
     </li>
   
@@ -374,7 +312,7 @@
   
     <li class="md-nav__item">
       <a href="FAQ.html" class="md-nav__link">
-        常见问题
+        Frequently Asked Questions
       </a>
     </li>
   
@@ -389,7 +327,7 @@
   
     <li class="md-nav__item">
       <a href="Releases.html" class="md-nav__link">
-        版本发布
+        Releases
       </a>
     </li>
   
@@ -404,7 +342,7 @@
   
     <li class="md-nav__item">
       <a href="Config_Changes.html" class="md-nav__link">
-        配置变更
+        Configuration Changes
       </a>
     </li>
   
@@ -419,7 +357,7 @@
   
     <li class="md-nav__item">
       <a href="Contact.html" class="md-nav__link">
-        联系方式
+        Contact
       </a>
     </li>
   
@@ -442,14 +380,14 @@
       
       
         <label class="md-nav__link" for="__nav_7">
-          安装和配置
+          Installation and Configuration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="安装和配置" data-md-level="1">
+      <nav class="md-nav" aria-label="Installation and Configuration" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          安装和配置
+          Installation and Configuration
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -460,7 +398,7 @@
   
     <li class="md-nav__item">
       <a href="Installation.html" class="md-nav__link">
-        安装
+        Installation
       </a>
     </li>
   
@@ -482,14 +420,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_2">
-          配置参考
+          Configuration Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="配置参考" data-md-level="2">
+      <nav class="md-nav" aria-label="Configuration Reference" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_2">
           <span class="md-nav__icon md-icon"></span>
-          配置参考
+          Configuration Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -500,7 +438,7 @@
   
     <li class="md-nav__item">
       <a href="Config_Reference.html" class="md-nav__link">
-        配置参考
+        Configuration reference
       </a>
     </li>
   
@@ -514,7 +452,7 @@
   
     <li class="md-nav__item">
       <a href="Rotation_Distance.html" class="md-nav__link">
-        旋转距离
+        Rotation distance
       </a>
     </li>
   
@@ -535,7 +473,7 @@
   
     <li class="md-nav__item">
       <a href="Config_checks.html" class="md-nav__link">
-        配置检查
+        Configuration checks
       </a>
     </li>
   
@@ -557,14 +495,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_4">
-          打印床调平
+          Bed Level
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="打印床调平" data-md-level="2">
+      <nav class="md-nav" aria-label="Bed Level" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_4">
           <span class="md-nav__icon md-icon"></span>
-          打印床调平
+          Bed Level
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -575,7 +513,7 @@
   
     <li class="md-nav__item">
       <a href="Bed_Level.html" class="md-nav__link">
-        打印床调平
+        Bed leveling
       </a>
     </li>
   
@@ -589,7 +527,7 @@
   
     <li class="md-nav__item">
       <a href="Delta_Calibrate.html" class="md-nav__link">
-        三角校正
+        Delta calibration
       </a>
     </li>
   
@@ -603,7 +541,7 @@
   
     <li class="md-nav__item">
       <a href="Probe_Calibrate.html" class="md-nav__link">
-        探针校准
+        Probe calibration
       </a>
     </li>
   
@@ -631,7 +569,7 @@
   
     <li class="md-nav__item">
       <a href="Manual_Level.html" class="md-nav__link">
-        手动调平
+        Manual leveling
       </a>
     </li>
   
@@ -645,7 +583,7 @@
   
     <li class="md-nav__item">
       <a href="Bed_Mesh.html" class="md-nav__link">
-        床网
+        Bed Mesh
       </a>
     </li>
   
@@ -659,7 +597,7 @@
   
     <li class="md-nav__item">
       <a href="Endstop_Phase.html" class="md-nav__link">
-        限位相位
+        Endstop phase
       </a>
     </li>
   
@@ -688,14 +626,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_5">
-          共振补偿
+          Resonance Compensation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="共振补偿" data-md-level="2">
+      <nav class="md-nav" aria-label="Resonance Compensation" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_5">
           <span class="md-nav__icon md-icon"></span>
-          共振补偿
+          Resonance Compensation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -706,7 +644,7 @@
   
     <li class="md-nav__item">
       <a href="Resonance_Compensation.html" class="md-nav__link">
-        共振补偿
+        Resonance Compensation
       </a>
     </li>
   
@@ -720,7 +658,7 @@
   
     <li class="md-nav__item">
       <a href="Measuring_Resonances.html" class="md-nav__link">
-        共振值测量
+        Measuring Resonances
       </a>
     </li>
   
@@ -741,7 +679,7 @@
   
     <li class="md-nav__item">
       <a href="Pressure_Advance.html" class="md-nav__link">
-        压力提前
+        Pressure advance
       </a>
     </li>
   
@@ -777,14 +715,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_8">
-          命令模板
+          Command templates
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="命令模板" data-md-level="2">
+      <nav class="md-nav" aria-label="Command templates" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_8">
           <span class="md-nav__icon md-icon"></span>
-          命令模板
+          Command templates
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -795,7 +733,7 @@
   
     <li class="md-nav__item">
       <a href="Command_Templates.html" class="md-nav__link">
-        命令模板
+        Commands templates
       </a>
     </li>
   
@@ -809,7 +747,7 @@
   
     <li class="md-nav__item">
       <a href="Status_Reference.html" class="md-nav__link">
-        状态参考
+        Status reference
       </a>
     </li>
   
@@ -830,7 +768,7 @@
   
     <li class="md-nav__item">
       <a href="TMC_Drivers.html" class="md-nav__link">
-        TMC 驱动器
+        TMC drivers
       </a>
     </li>
   
@@ -844,7 +782,7 @@
   
     <li class="md-nav__item">
       <a href="Multi_MCU_Homing.html" class="md-nav__link">
-        多微控制器归位与探高
+        Multiple Micro-controller Homing and Probing
       </a>
     </li>
   
@@ -858,7 +796,7 @@
   
     <li class="md-nav__item">
       <a href="Slicers.html" class="md-nav__link">
-        切片软件
+        Slicers
       </a>
     </li>
   
@@ -872,7 +810,7 @@
   
     <li class="md-nav__item">
       <a href="Skew_Correction.html" class="md-nav__link">
-        偏斜校正
+        Skew correction
       </a>
     </li>
   
@@ -900,7 +838,7 @@
   
     <li class="md-nav__item">
       <a href="Using_PWM_Tools.html" class="md-nav__link">
-        使用 PWM 工具
+        Using PWM tools
       </a>
     </li>
   
@@ -930,14 +868,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          开发者文档
+          Developer Documentation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="开发者文档" data-md-level="1">
+      <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          开发者文档
+          Developer Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -948,7 +886,7 @@
   
     <li class="md-nav__item">
       <a href="Code_Overview.html" class="md-nav__link">
-        代码总览
+        Code overview
       </a>
     </li>
   
@@ -962,7 +900,7 @@
   
     <li class="md-nav__item">
       <a href="Kinematics.html" class="md-nav__link">
-        运动学
+        Kinematics
       </a>
     </li>
   
@@ -976,7 +914,7 @@
   
     <li class="md-nav__item">
       <a href="Protocol.html" class="md-nav__link">
-        协议
+        Protocol
       </a>
     </li>
   
@@ -990,7 +928,7 @@
   
     <li class="md-nav__item">
       <a href="API_Server.html" class="md-nav__link">
-        API 服务器
+        API server
       </a>
     </li>
   
@@ -1004,7 +942,7 @@
   
     <li class="md-nav__item">
       <a href="MCU_Commands.html" class="md-nav__link">
-        MCU命令
+        MCU commands
       </a>
     </li>
   
@@ -1018,7 +956,7 @@
   
     <li class="md-nav__item">
       <a href="CANBUS_protocol.html" class="md-nav__link">
-        CANBUS 协议 (CANBUS protocol)
+        CANBUS protocol
       </a>
     </li>
   
@@ -1032,7 +970,7 @@
   
     <li class="md-nav__item">
       <a href="Debugging.html" class="md-nav__link">
-        调试
+        Debugging
       </a>
     </li>
   
@@ -1046,7 +984,7 @@
   
     <li class="md-nav__item">
       <a href="Benchmarks.html" class="md-nav__link">
-        基准测试
+        Benchmarks
       </a>
     </li>
   
@@ -1060,7 +998,7 @@
   
     <li class="md-nav__item">
       <a href="CONTRIBUTING.html" class="md-nav__link">
-        为 Klipper 做贡献
+        Contributing to Klipper
       </a>
     </li>
   
@@ -1074,7 +1012,7 @@
   
     <li class="md-nav__item">
       <a href="Packaging.html" class="md-nav__link">
-        打包 Klipper
+        Packaging Klipper
       </a>
     </li>
   
@@ -1104,14 +1042,14 @@
       
       
         <label class="md-nav__link" for="__nav_9">
-          设备特定文档
+          Device Specific Documents
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="设备特定文档" data-md-level="1">
+      <nav class="md-nav" aria-label="Device Specific Documents" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
-          设备特定文档
+          Device Specific Documents
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1122,7 +1060,7 @@
   
     <li class="md-nav__item">
       <a href="Example_Configs.html" class="md-nav__link">
-        配置示例
+        Example configurations
       </a>
     </li>
   
@@ -1136,7 +1074,7 @@
   
     <li class="md-nav__item">
       <a href="SDCard_Updates.html" class="md-nav__link">
-        通过SD卡更新
+        SDCard updates
       </a>
     </li>
   
@@ -1150,7 +1088,7 @@
   
     <li class="md-nav__item">
       <a href="RPi_microcontroller.html" class="md-nav__link">
-        RPi 微控制器
+        RPi microcontroller
       </a>
     </li>
   
@@ -1178,7 +1116,7 @@
   
     <li class="md-nav__item">
       <a href="Bootloaders.html" class="md-nav__link">
-        底层引导程序
+        Bootloaders
       </a>
     </li>
   
@@ -1192,7 +1130,7 @@
   
     <li class="md-nav__item">
       <a href="CANBUS.html" class="md-nav__link">
-        CAN 总线
+        CANBUS
       </a>
     </li>
   
@@ -1206,7 +1144,7 @@
   
     <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
-        TSL1401CL 耗材宽度传感器
+        TSL1401CL filament width sensor
       </a>
     </li>
   
@@ -1220,7 +1158,7 @@
   
     <li class="md-nav__item">
       <a href="Hall_Filament_Width_Sensor.html" class="md-nav__link">
-        霍尔耗材线径传感器
+        Hall filament width sensor
       </a>
     </li>
   
@@ -1246,7 +1184,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1255,34 +1193,55 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
+  <a href="#attaching-and-detaching-positions" class="md-nav__link">
+    Attaching and Detaching Positions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
+  <a href="#dock-z-location" class="md-nav__link">
+    Dock Z location
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
+  <a href="#tool-velocities" class="md-nav__link">
+    Tool Velocities
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
+  <a href="#probe-attachment-verification" class="md-nav__link">
+    Probe Attachment Verification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-actions" class="md-nav__link">
+    Custom Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gcode-commands" class="md-nav__link">
+    Gcode commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-probe-execution-flow" class="md-nav__link">
+    Typical probe execution flow
   </a>
   
 </li>
@@ -1299,79 +1258,383 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/Klipper3d/klipper/blob/master/docs/Overview.md" title="编辑此页" class="md-content__button md-icon">
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/Dockable_Probe.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>欢迎使用Klipper文档。如果刚接触Klipper，请从<a href="features.md">特性</a>和<a href="installation.md">安装</a>文档开始阅读。</p>
-<h2 id="_2">概览信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>This document is meant to describe behavior related to dockable probes.
+These probes are typically microswitches mounted to a printed body that
+attaches to the toolhead through some means of mechanical coupling.
+This coupling is commonly done with magnets though this module can support
+a variety of designs including servo and stepper actuated couplings.</p>
+<h1 id="basic-configuration">Basic Configuration<a class="headerlink" href="#basic-configuration" title="Permanent link">&para;</a></h1>
+<p>The minimum requirements for functionality are a config section where the
+following options are specified. Some users may be transitioning from a macro
+based set of commands and many of the options for the <code>[probe]</code> config section
+are the same. The <code>[dockable_probe]</code> module is first and foremost a <code>[probe]</code>
+with additional functionality added. Any options that can be specified in
+for <code>[probe]</code> are valid for <code>[dockable_probe]</code> as well.</p>
+<div class="highlight"><pre><span></span><code>[dockable_probe]
+pin:
+z_offset:
+sample_retract_dist:
+approach_position:
+detach_position:
+check_open_attach:
+dock_fixed_z:
+</code></pre></div>
+
+<p>Additional optional parameters are described in this guide as well as the
+required parameters. Certain optional parameters are not required, but highly recommended in order to ensure desired probe behavior is observed. Additionally
+the <a href="Probe_Calibrate.html">probe calibrate guide</a> is recommended reading
+for users unfamiliar with probe setup in Klipper.</p>
+<h2 id="attaching-and-detaching-positions">Attaching and Detaching Positions<a class="headerlink" href="#attaching-and-detaching-positions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>    dock_position: 300, 295, 0
+</code></pre></div>
+
+<p>The first option to specify is the <code>dock_position</code>. This is simply the XYZ
+coordinates where the toolhead needs to be positioned in order to attach
+the probe. This parameter is X, Y and, Z separated by commas.</p>
+<p>Many configurations have the dock attached to a moving gantry. This effectively
+means that Z axis positioning is irrelevant. However, it may be necessary
+to move the gantry clear of the bed or other printer components before
+performing docking steps. Automatic Z hop distances are calculated based on the
+probe <code>z_offset</code> + <code>sample_retract_dist</code> to ensure travel moves are
+safe. If a Z axis amount is specified for this type of dock, the additional
+amount will be added to the Z hop distance.</p>
+<p>Other configurations may have the dock mounted next to the printer bed so
+that the Z position <em>must</em> be known prior to attaching the probe. If the
+probe is mounted in such a way, the Z axis parameter <em>must</em> be supplied,
+and the Z axis <em>must</em> be homed prior to attaching the probe.</p>
+<div class="highlight"><pre><span></span><code>    approach_position: 300, 250
+</code></pre></div>
+
+<p>The most common dock designs utilize a sort of fork or arms that extend out
+from the dock. In order to attach the probe to the toolhead, the toolhead must
+move into and away from the dock at a particular angle so that these arms can
+capture the probe body. For magnetically coupled probes, the <code>approach_position</code>
+should be defined so that it is far enough away from the probe so that the
+magnets on the probe body are not attracted to the magnets on the toolhead.</p>
+<div class="highlight"><pre><span></span><code>    detach_position:  250, 295
+</code></pre></div>
+
+<p>Most probes that use magnets require the toolhead to move in a direction that
+strips the magnets off with a sliding motion. This is to prevent the magnets
+from becoming unseated from repeated pulling and thus affecting probe accuracy.
+The <code>detach_position</code> is typically defined as a point that is perpendicular to
+the dock so that when the toolhead moves, the probe stays docked but cleanly
+detaches from the toolhead mount. For magnetically coupled probes, the
+<code>detach_position</code> should be defined so that it is far enough away from the
+probe so that the magnets on the probe body are not attracted to the magnets on
+the toolhead.</p>
+<h2 id="dock-z-location">Dock Z location<a class="headerlink" href="#dock-z-location" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>    dock_fixed_z:   default false
+</code></pre></div>
+
+<p>There are various locations that probe docks have been mounted. It seems the
+more common locations are next to a bed or on a moving gantry. If the probe
+is "fixed" on the Z axis, meaning, it's position relative to XY plane of the
+toolhead is always the same, this option should be set to "true".</p>
+<p>An example where <code>dock_fixed_z: True</code> is a corexy printer with a bed that moves
+up and down along the Z axis with the probe dock mounted to the frame next to a
+fixed gantry. The toolhead can move to the probe dock <em>regardless</em> of where
+the bed is positioned.</p>
+<p>Another example would be a printer with a bed that is fixed to the base of the
+printer and the gantry moves along all 3 axes. The dock is mounted to a point on
+this moving gantry. This as well would be <code>dock_fixed_z: True</code></p>
+<p>A example where <code>dock_fixed_z: False</code> would be a i3 style printer where the dock
+is located on the moving bed. When the Z axis moves, the dock's position changes
+relative to the toolhead.</p>
+<p>Another example of <code>dock_fixed_z: False</code> is a cartesian or hbot cube printer
+where the dock is mounted next to the moving bed on the Z axis itself.</p>
+<p>Any printer where <code>dock_fixed_z: False</code> requires that the z axis be homed prior
+to moving to the dock.</p>
+<div class="highlight"><pre><span></span><code>    safe_z_position:    0,0
+</code></pre></div>
+
+<p>An optional parameter may be defined for homing the Z axis using the probe.
+Similar to <code>safe_z_home</code>, a set of x y coordinates may be defined to use when
+homing. If this parameter is omitted, the center of the bed will be used.</p>
+<h2 id="tool-velocities">Tool Velocities<a class="headerlink" href="#tool-velocities" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>    attach_speed:   default is probe speed or 5mm/s
+    detach_speed: default is probe speed or 5mm/s
+    travel_speed:   default is 50 mm/s
+</code></pre></div>
+
+<p>Various optional speeds can be defined for approaching, detaching and
+traveling. If these parameters are omitted, the module will use the <code>speed</code>
+parameter of the probe if defined. If this option is not supplied, 5mm/s
+will be used.</p>
+<h2 id="probe-attachment-verification">Probe Attachment Verification<a class="headerlink" href="#probe-attachment-verification" title="Permanent link">&para;</a></h2>
+<p>Given the nature of this type of probe, it is necessary to verify whether or
+not it has successfully attached prior to attempting a probing move. Several
+methods can be used to verify various probe attachment states.</p>
+<div class="highlight"><pre><span></span><code>    check_open_attach: default false
+</code></pre></div>
+
+<p>Certain probes when wired a certain way will report <code>OPEN</code> when they are
+attached and <code>TRIGGERED</code> when they are detached in a non-probing state. The
+<code>check_open_attach</code> option when set to <code>true</code> will check the state of the
+probe pin after performing a probe attach or docking maneuver. If the probe
+reports <code>TRIGGERED</code> immediately after the toolhead leaves the dock radius, an
+error will be raised and any further action will be aborted.</p>
+<p>This is intended to prevent crashing the nozzle into the bed since it is
+assumed if the probe pin reads <code>TRIGGERED</code> prior to probing, the probe is
+not attached.</p>
+<div class="highlight"><pre><span></span><code>    probe_sense_pin:
+</code></pre></div>
+
+<p>The probe may include a separate pin for attachment verification. This is a
+standard pin definition similar to an endstop pin that defines how to handle the
+input from the sensor. Much like the <code>check_open_attach</code> option, the check is
+done immediately after the tool attaches or docks the probe. If the probe
+is not attached after attempting to attach it, or it remains attached after
+attempting to dock it, an error will be raised and further action will be
+aborted.</p>
+<div class="highlight"><pre><span></span><code>    dock_sense_pin:
+</code></pre></div>
+
+<p>Certain docks may have a sensor or switch incorporated into their design in
+order to report that the probe is presently located in the dock. A
+<code>dock_sense_pin</code> may be provided to provide verification that the probe is
+correctly positioned in the dock. This is a standard pin definition similar
+to an endstop pin that defines how to handle the input from the sensor.
+Prior to attempting to attach the probe, and after attempting to dock it,
+this pin is checked. If the probe is not stowed, an error will be raised and
+further action will be aborted.</p>
+<div class="highlight"><pre><span></span><code>    dock_retries:   0
+</code></pre></div>
+
+<p>A magnetic probe may require repeated attempts to attach. If <code>dock_retries</code> is
+specified and the probe fails to attach or detach, the attach/detach action
+will be repeated until it succeeds. If the retry limit is reached and the probe
+is still not in the correct state, an error is raised and futher actions
+are aborted.</p>
+<div class="highlight"><pre><span></span><code>    allow_delayed_detach: False
+</code></pre></div>
+
+<p>Typically, a command that requires the use of the probe will cause the probe
+to be attached and then docked when it is no longer needed. In the context
+of start gcode, a homing macro, or any sequence with multiple commands requiring
+the use of the probe, this results in the probe repeatedly being attached and
+docked between commands. If the <code>allow_delayed_detach</code> option is set to True,
+the probe will wait for a short period of time before docking at the end of
+a command. This can result in calibration macros executing faster as the probe
+has to do less traveling. If this option is used, it is recommended to add
+the manual <code>DETACH_PROBE</code> command at the end of a macro or start gcode. Often
+the <em>next</em> command will start to execute <em>prior</em> to the probe detaching which
+can result in a collision.</p>
+<h2 id="custom-actions">Custom Actions<a class="headerlink" href="#custom-actions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>    pre_attach_gcode:
+    attach_gcode:
+    post_attach_gcode:
+    pre_detach_gcode:
+    detach_gcode:
+    post_detach_gcode:
+</code></pre></div>
+
+<p>As universal as this module attempts to be, all use cases cannot be accounted
+for. As such several "custom" gcode command templates may be supplied to be
+executed at various times during probe maneuvers. These optional gcode sections
+may be configured like standard gcode macro command templates with the exception
+that gcode macro variables, default parameters, and rename_existing options are
+excluded.</p>
+<p>These command templates are inserted at various points of the probe execution
+flow (below) so they may be used to activate a servo or move the toolhead to
+a position that aligns cabling or tubes so that they do not snag on parts of
+the printer.</p>
+<div class="highlight"><pre><span></span><code>    pre_attach_gcode:
+</code></pre></div>
+
+<p>If specified, the <code>pre_attach_gcode</code> is called prior to approaching the dock.
+If a servo is needed to move the dock, this is where that command should be
+issued.</p>
+<div class="highlight"><pre><span></span><code>    attach_gcode:
+</code></pre></div>
+
+<p>If specified, the <code>attach_gcode</code> commands are executed immediately <em>after</em> the
+toolhead reaches the <code>dock_position</code>. This gcode may be repeated if the probe
+fails to attach and <code>dock_retries</code> are specified.</p>
+<div class="highlight"><pre><span></span><code>    post_attach_gcode:
+</code></pre></div>
+
+<p>If specified, the <code>post_attach_gcode</code> is called immediately after leaving the
+dock, but only if the probe was successfully attached.</p>
+<div class="highlight"><pre><span></span><code>    pre_detach_gcode:
+</code></pre></div>
+
+<p>If specified, the <code>pre_detach_gcode</code> is called prior to approaching the dock.
+If a servo is needed to move the dock, this is where that command should be
+issued.</p>
+<div class="highlight"><pre><span></span><code>    detach_gcode:
+</code></pre></div>
+
+<p>If specified, the <code>detach_gcode</code> commands are executed immediately <em>after</em> the
+toolhead reaches the <code>dock_position</code>. This gcode may be repeated if the probe
+fails to detach and <code>dock_retries</code> are specified.</p>
+<div class="highlight"><pre><span></span><code>    post_detach_gcode:
+</code></pre></div>
+
+<p>If specified, the <code>post_detach_gcode</code> is called immediately after leaving the
+dock, but only if the probe was successfully docked.</p>
+<h2 id="gcode-commands">Gcode commands<a class="headerlink" href="#gcode-commands" title="Permanent link">&para;</a></h2>
+<p>There are 4 gcode commands that can be used with the probe to perform various
+tasks or obtain status information.</p>
+<div class="highlight"><pre><span></span><code>    ATTACH_PROBE
+</code></pre></div>
+
+<p>This command will move the toolhead to the dock, attach the probe, and then
+return to its previous position. If the probe is already attached, the command
+will not do anything</p>
+<div class="highlight"><pre><span></span><code>    DETACH_PROBE
+</code></pre></div>
+
+<p>This command will move the toolhead to the dock, detach the probe, and then
+return to its previous position. If the probe is already detached, the command
+will not do anything</p>
+<div class="highlight"><pre><span></span><code>    GET_PROBE_STATUS
+</code></pre></div>
+
+<p>Responds in the gcode terminal with the current status the probe is in. Valid
+states are UNKNOWN, ATTACHED, and DOCKED. This is useful during configuration
+to confirm probe validation methods are working as intended.</p>
+<h2 id="typical-probe-execution-flow">Typical probe execution flow<a class="headerlink" href="#typical-probe-execution-flow" title="Permanent link">&para;</a></h2>
+<pre><code>Probing is Started:
+</code></pre>
 <ul>
-<li><a href="Features.html">功能</a>：Klipper 中的高级功能列表。</li>
-<li><a href="FAQ.html">常见问题</a>：常见问题。</li>
-<li><a href="Release.md">发行版</a>：Klipper 的版本发布历史。</li>
-<li><a href="Config_Changes.html">配置更改</a>：可能需要手动更新打印机配置文件的软件更改。</li>
-<li><a href="Contact.html">联系</a>：关于如何提交错误报告和联系 Klipper 开发者的信息。</li>
+<li>A gcode command requiring the use of the probe is executed.</li>
 </ul>
-<h2 id="_3">安装和配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="Installation.html">安装</a>：Klipper 安装指南。</li>
-<li><a href="Config_Reference.html">配置参考</a>：配置参数说明。<ul>
-<li><a href="Rotation_Distance.html">旋转距离</a>：计算旋转距离(rotation_distance)步进参数。</li>
+<li>This triggers the probe to attach</li>
 </ul>
-</li>
-<li><a href="Config_checks.html">检查配置</a>：验证配置文件中的基本引脚设置。</li>
-<li><a href="Bed_Level.html">打印床调平</a>：Klipper 中关于“打印床调平”的信息。<ul>
-<li><a href="Delta_Calibrate.html">三角洲校准</a>：校准三角洲结构。</li>
-<li><a href="Probe_Calibrate.html">探针校准</a>：校准自动Z探针。</li>
-<li><a href="BLTouch.html">BL-Touch</a>：配置“BL-Touch”Z 探针。</li>
-<li><a href="Manual_Level.html">手动调平</a>：校准 Z 限位和调整热床调平螺丝。</li>
-<li><a href="Bed_Mesh.html">床网</a>：基于 XY 位置的打印床高度补偿。</li>
-<li><a href="Endstop_Phase.html">限位相位</a>：使用步进电机相位辅助 Z 限位定位。</li>
-</ul>
-</li>
-<li><a href="Resonance_Compensation.html">共振补偿</a>：减少打印震纹的工具。<ul>
-<li><a href="Measuring_Resonances.html">测量共振</a>：使用 adxl345 加速度计模块测量共振。</li>
-</ul>
-</li>
-<li><a href="Pressure_Advance.html">提前压力</a>：校准挤出机压力。</li>
-<li><a href="G-Codes.html">G代码</a>：用于 Klipper 的G代码命令。</li>
-<li><a href="Command_Templates.html">命令模板</a>：G代码宏和条件判断。<ul>
-<li><a href="Status_Reference.html">状态参考</a>：可用于宏和类似功能的信息。</li>
-</ul>
-</li>
-<li><a href="TMC_Drivers.html">TMC驱动</a>：在 Klipper 中使用 Trinamic 步进电机驱动。</li>
-<li><a href="Multi_MCU_Homing.html">Multi-MCU Homing</a>：在归位和探测时使用多个微处理器。</li>
-<li><a href="Slicers.html">切片</a>：为 Klipper 配置切片软件。</li>
-<li><a href="Skew_Correction.html">偏斜校正</a>：调整不完全垂直的轴（不完美的方形）。</li>
-<li><a href="Using_PWM_Tools.html">PWM 工具</a>：关于如何使用 PWM 控制的工具，例如激光器或电钻头。</li>
-<li><a href="Exclude_Object.html">排除对象</a>：排除对象实现的指南。</li>
-</ul>
-<h2 id="_4">开发者文档<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="Code_Overview.html">代码概述</a>：开发者应该从这个文档开始阅读。</li>
-<li><a href="Kinematics.html">运动学</a>：关于 Klipper 如何实现运动的技术细节。</li>
-<li><a href="Protocol.html">协议</a>：主机和微控制器之间的低级通信协议的信息。</li>
-<li><a href="API_Server.html">API 服务器</a>：关于 Klipper 的命令与控制 API 的信息。</li>
-<li><a href="MCU_Commands.html">MCU 指令</a>：描述在微控制器软件中实现的低级指令。</li>
-<li><a href="CANBUS_protocol.html">CAN 总线协议</a>：Klipper 的 CAN总线报文格式。</li>
-<li><a href="Debugging.html">调试</a>：关于如何测试和调试 Klipper。</li>
-<li><a href="Benchmarks.html">基准测试</a>：关于 Klipper 基准测试的方法。</li>
-<li><a href="CONTRIBUTING.html">贡献</a>：有关如何向 Klipper 提交改进方法的信息。</li>
-<li><a href="Packaging.html">打包</a>：有关于如何构建系统包的信息。</li>
+<li>If configured, the dock sense pin is checked to see if the probe is
+      presently in the dock</li>
 </ul>
-<h2 id="_5">设备特定文档<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="Example_Configs.html">示列配置</a>：有关于添加示列配置到 Klipper 的信息。</li>
-<li><a href="SDCard_Updates.html">SD卡更新</a>：通过将固件拷贝到SD卡中，再通过微控制器的SD卡槽来刷写微控制器。</li>
-<li><a href="RPi_microcontroller.html">将树莓派作为微控制器</a>：关于如何控制与树莓派 GPIO 引脚连接的设备。</li>
-<li><a href="Beaglebone.html">Beaglebone</a>：在 Beaglebone PRU 上运行 Klipper 的详细信息。</li>
-<li><a href="Bootloaders.html">底层引导程序</a>：有关于微控制器刷写的开发者信息。</li>
-<li><a href="CANBUS.html">CAN 总线</a>：有关于 Klipper 使用 CAN 总线的信息。</li>
-<li><a href="TSL1401CL_Filament_Width_Sensor.html">TSL1401CL 耗材线径传感器</a></li>
-<li><a href="Hall_Filament_Width_Sensor.html">霍尔打印丝宽度传感器</a></li>
+<li>If specified, the pre-attach gcode is executed</li>
 </ul>
+<ul>
+<li>The toolhead position is compared to the dock position.</li>
+</ul>
+<ul>
+<li>If the toolhead is outside of the minimum safe radius, the toolhead is
+      commanded to move to the the approach vector, that is, a position that is
+      the minimum safe distance from the dock in line with the dock angle</li>
+</ul>
+<ul>
+<li>If the toolhead is inside of the minimum safe radius, the toolhead is
+      commanded to move to the nearest point on the line of the approach vector</li>
+</ul>
+<ul>
+<li>The tool is moved along the approach vector to the dock coordinates</li>
+</ul>
+<ul>
+<li>If specified, the attach gcode is executed</li>
+</ul>
+<ul>
+<li>The toolhead is commanded to move out of the dock back to the minimum
+      safe distance in the reverse direction along the dock angle.</li>
+</ul>
+<ul>
+<li>If configured, the probe is checked to see if it is attached</li>
+</ul>
+<ul>
+<li>If the probe is not attached, the module retries until it is or an error
+      is raised</li>
+</ul>
+<ul>
+<li>If configured, the dock sense pin is checked to see if the probe is still
+      present, the module retries until it not or an error is raised</li>
+</ul>
+<ul>
+<li>If specified, the post-attach gcode is executed</li>
+</ul>
+<ul>
+<li>The probe moves to the first probing point and beings probing<p>Probing is Finished:</p>
+</li>
+</ul>
+<ul>
+<li>After the probe is no longer needed, the probe is triggered to detach.</li>
+</ul>
+<ul>
+<li>If specified, the pre-detach gcode is executed</li>
+</ul>
+<ul>
+<li>The toolhead position is compared to the dock position.</li>
+</ul>
+<ul>
+<li>If the toolhead is outside of the minimum safe radius, the toolhead is
+      commanded to move to the the approach vector, that is, a position that is
+      the minimum safe distance from the dock in line with the dock angle</li>
+</ul>
+<ul>
+<li>If the toolhead is inside of the minimum safe radius, the toolhead is
+      commanded to move to the nearest point on the line of the approach vector</li>
+</ul>
+<ul>
+<li>The tool is moved along the approach vector to the dock coordinates</li>
+</ul>
+<ul>
+<li>If specified, the detach gcode is executed</li>
+</ul>
+<ul>
+<li>The tool is commanded to move along the detach vector if supplied or a
+      calculated direction based on axis parameters</li>
+</ul>
+<ul>
+<li>If configured, the probe is checked to see if it is detached</li>
+</ul>
+<ul>
+<li>If the probe is not detached, the module moves the tool back to the
+      approach vector and retries until it detaches or an error is raised</li>
+</ul>
+<ul>
+<li>If configured, the dock sense pin is checked to see if the probe is
+      present in the dock. If it is not the module moves the tool back to the
+      approach vector and retries until it detaches or an error is raised</li>
+</ul>
+<ul>
+<li>If specified, the post-detach gcode is executed</li>
+</ul>
+<h1 id="use-in-macros">Use in macros<a class="headerlink" href="#use-in-macros" title="Permanent link">&para;</a></h1>
+<p>The dockable_probe module can use a delayed detach so that it does not
+repeatedly dock and undock the probe from the toolhead while it is being
+used in the context of a homing macro or slicer start gcode. This works
+in most cases, but if a call to heat-and-wait (M109, M190) or a toolhead move
+comes too soon after probing is finished, it may result in the probe staying
+attached to the toolhead until after the heater is done heating or the gcode
+move completes. This can be avoided by placing a call to <code>DETACH_PROBE</code>
+immediately <em>after</em> the last command requiring the probe.</p>
+<p>example 1:</p>
+<p>Gcode file from slicer</p>
+<div class="highlight"><pre><span></span><code>start_print b=90 e=250
+</code></pre></div>
+
+<p>Macro definition in Klipper</p>
+<div class="highlight"><pre><span></span><code>[gcode_macro start_print]
+gcode:
+    M190 S{b}           ;set bed temp and wait
+    G28                 ;home all axes
+    BED_MESH_CALIBRATE  ;generate a bed mesh
+    G28 Z0              ;rehome z axis
+    DETACH_PROBE        ;ensure probe is detached
+    M109 S{e}
+</code></pre></div>
+
+<p>example 2:</p>
+<p>Gcode file from slicer</p>
+<div class="highlight"><pre><span></span><code>M190 S[first_layer_bed_temperature]
+M109 S[first_layer_temperature]
+G28
+BED_MESH_CALIBRATE
+G28 Z0
+DETACH_PROBE
+G92 E0
+G1 X0.1 Y0 F8000 ;begin priming line
+G1 Z2.0 F3000
+</code></pre></div>
 
               
             </article>
@@ -1380,32 +1643,12 @@
         
           <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-            回到页面顶部
+            Back to top
           </a>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
-      
-      
-        
-        <a href="Features.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 功能" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              功能
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1427,7 +1670,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="assets/javascripts/bundle.e1a181d9.min.js"></script>
