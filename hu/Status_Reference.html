@@ -169,6 +169,12 @@
                   </a>
                 </li>
                 
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
             </ul>
           </div>
         </div>
@@ -798,6 +804,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bed_screws" class="md-nav__link">
+    bed_screws
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configfile" class="md-nav__link">
     configfile
   </a>
@@ -898,6 +911,13 @@
         <li class="md-nav__item">
   <a href="#led" class="md-nav__link">
     led
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual_probe" class="md-nav__link">
+    manual_probe
   </a>
   
 </li>
@@ -1468,6 +1488,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sponsors.html" class="md-nav__link">
+        Szponzorok
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1504,6 +1539,13 @@
         <li class="md-nav__item">
   <a href="#bed_mesh" class="md-nav__link">
     bed_mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bed_screws" class="md-nav__link">
+    bed_screws
   </a>
   
 </li>
@@ -1609,6 +1651,13 @@
         <li class="md-nav__item">
   <a href="#led" class="md-nav__link">
     led
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual_probe" class="md-nav__link">
+    manual_probe
   </a>
   
 </li>
@@ -1784,6 +1833,14 @@
 <li><code>profile_name</code>, <code>mesh_min</code>, <code>mesh_max</code>, <code>probed_matrix</code>, <code>mesh_matrix</code>: Az aktuálisan aktív bed_mesh-re vonatkozó információk.</li>
 <li><code>profiles</code>: A BED_MESH_PROFILE használatával beállított, jelenleg definiált profilok halmaza.</li>
 </ul>
+<h2 id="bed_screws">bed_screws<a class="headerlink" href="#bed_screws" title="Permanent link">&para;</a></h2>
+<p>A következő információk a <code>Config_Reference.md#bed_screws</code> objektumban találhatók:</p>
+<ul>
+<li><code>is_active</code>: True értéket ad vissza, ha az ágycsavarok beállítási eszköze jelenleg aktív.</li>
+<li><code>state</code>: Az ágycsavarok beállítási szerszámának állapota. A következő karakterláncok egyike: "adjust", "fine".</li>
+<li><code>current_screw</code>: Az aktuálisan beállított csavar indexe.</li>
+<li><code>accepted_screws</code>: Az elfogadott csavarok száma.</li>
+</ul>
 <h2 id="configfile">configfile<a class="headerlink" href="#configfile" title="Permanent link">&para;</a></h2>
 <p>A következő információk a <code>configfile</code> objektumban találhatók (ez az objektum mindig elérhető):</p>
 <ul>
@@ -1910,6 +1967,14 @@
 <p>A következő információk állnak rendelkezésre minden egyes <code>[led led_name]</code>, <code>[neopixel led_name</code> esetében, <code>[dotstar led_name]</code>, <code>[pca9533 led_name]</code>, és <code>[pca9632 led_name]</code> a nyomtatóban meghatározott printer.cfg fájlban:</p>
 <ul>
 <li><code>color_data</code>: A láncban lévő ledek RGBW értékeit tartalmazó színlisták listája. Minden értéket 0,0 és 1,0 közötti lebegőértékként ábrázolunk. Minden színlista 4 elemet tartalmaz (piros, zöld, kék, fehér), még akkor is, ha az alatta lévő LED kevesebb színcsatornát támogat. Például a lánc második neopixelének kék értéke (a színlista 3. eleme) a <code>printer["neopixel &lt;config_name&gt;"].color_data[1][2]</code> címen érhető el.</li>
+</ul>
+<h2 id="manual_probe">manual_probe<a class="headerlink" href="#manual_probe" title="Permanent link">&para;</a></h2>
+<p>A következő információk a <code>manual_probe</code> objektumban találhatók:</p>
+<ul>
+<li><code>is_active</code>: True értéket ad vissza, ha egy kézi mérési segédszkript jelenleg aktív.</li>
+<li><code>z_position</code>: A fúvóka aktuális magassága (ahogyan azt a nyomtató jelenleg értelmezi).</li>
+<li><code>z_position_lower</code>: Az utolsó mérés kísérlet éppen az aktuális magasságnál alacsonyabb.</li>
+<li><code>z_position_upper</code>: Az utolsó mérés kísérlet éppen nagyobb, mint az aktuális magasság.</li>
 </ul>
 <h2 id="mcu">mcu<a class="headerlink" href="#mcu" title="Permanent link">&para;</a></h2>
 <p>A következő információk az <a href="Config_Reference.html#mcu">mcu</a> és <a href="Config_Reference.html#mcu-my_extra_mcu">mcu some_name</a> objektumokban érhetők el:</p>

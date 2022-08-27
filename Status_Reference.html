@@ -169,6 +169,12 @@
                   </a>
                 </li>
                 
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
             </ul>
           </div>
         </div>
@@ -798,6 +804,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bed_screws" class="md-nav__link">
+    bed_screws
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configfile" class="md-nav__link">
     configfile
   </a>
@@ -898,6 +911,13 @@
         <li class="md-nav__item">
   <a href="#led" class="md-nav__link">
     led
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual_probe" class="md-nav__link">
+    manual_probe
   </a>
   
 </li>
@@ -1468,6 +1488,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1504,6 +1539,13 @@
         <li class="md-nav__item">
   <a href="#bed_mesh" class="md-nav__link">
     bed_mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bed_screws" class="md-nav__link">
+    bed_screws
   </a>
   
 </li>
@@ -1609,6 +1651,13 @@
         <li class="md-nav__item">
   <a href="#led" class="md-nav__link">
     led
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual_probe" class="md-nav__link">
+    manual_probe
   </a>
   
 </li>
@@ -1796,6 +1845,17 @@ Klipper software.</p>
   <code>mesh_matrix</code>: Information on the currently active bed_mesh.</li>
 <li><code>profiles</code>: The set of currently defined profiles as setup
    using BED_MESH_PROFILE.</li>
+</ul>
+<h2 id="bed_screws">bed_screws<a class="headerlink" href="#bed_screws" title="Permanent link">&para;</a></h2>
+<p>The following information is available in the
+<code>Config_Reference.md#bed_screws</code> object:</p>
+<ul>
+<li><code>is_active</code>: Returns True if the bed screws adjustment tool is currently
+active.</li>
+<li><code>state</code>: The bed screws adjustment tool state. It is one of
+the following strings: "adjust", "fine".</li>
+<li><code>current_screw</code>: The index for the current screw being adjusted.</li>
+<li><code>accepted_screws</code>: The number of accepted screws.</li>
 </ul>
 <h2 id="configfile">configfile<a class="headerlink" href="#configfile" title="Permanent link">&para;</a></h2>
 <p>The following information is available in the <code>configfile</code> object
@@ -2015,6 +2075,17 @@ is always available):</p>
   chain could be accessed at
   <code>printer["neopixel &lt;config_name&gt;"].color_data[1][2]</code>.</li>
 </ul>
+<h2 id="manual_probe">manual_probe<a class="headerlink" href="#manual_probe" title="Permanent link">&para;</a></h2>
+<p>The following information is available in the
+<code>manual_probe</code> object:</p>
+<ul>
+<li><code>is_active</code>: Returns True if a manual probing helper script is currently
+active.</li>
+<li><code>z_position</code>: The current height of the nozzle (as the printer currently
+understands it).</li>
+<li><code>z_position_lower</code>: Last probe attempt just lower than the current height.</li>
+<li><code>z_position_upper</code>: Last probe attempt just greater than the current height.</li>
+</ul>
 <h2 id="mcu">mcu<a class="headerlink" href="#mcu" title="Permanent link">&para;</a></h2>
 <p>The following information is available in
 <a href="Config_Reference.html#mcu">mcu</a> and
@@ -2186,6 +2257,8 @@ objects (eg, <code>[tmc2208 stepper_x]</code>):</p>
 <li><code>axis_minimum</code>, <code>axis_maximum</code>: The axis travel limits (mm) after
   homing.  It is possible to access the x, y, z components of this
   limit value (eg, <code>axis_minimum.x</code>, <code>axis_maximum.z</code>).</li>
+<li>For Delta printers the <code>cone_start_z</code> is the max z height at
+  maximum radius (<code>printer.toolhead.cone_start_z</code>).</li>
 <li><code>max_velocity</code>, <code>max_accel</code>, <code>max_accel_to_decel</code>,
   <code>square_corner_velocity</code>: The current printing limits that are in
   effect. This may differ from the config file settings if a
