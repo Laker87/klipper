@@ -839,6 +839,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#extruder_stepper" class="md-nav__link">
+    extruder_stepper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fan" class="md-nav__link">
     fan
   </a>
@@ -1051,6 +1058,13 @@
         <li class="md-nav__item">
   <a href="#webhooks" class="md-nav__link">
     webhooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z_thermal_adjust" class="md-nav__link">
+    z_thermal_adjust
   </a>
   
 </li>
@@ -1579,6 +1593,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#extruder_stepper" class="md-nav__link">
+    extruder_stepper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fan" class="md-nav__link">
     fan
   </a>
@@ -1796,6 +1817,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#z_thermal_adjust" class="md-nav__link">
+    z_thermal_adjust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#z_tilt" class="md-nav__link">
     z_tilt
   </a>
@@ -1939,6 +1967,13 @@ the following strings: "adjust", "fine".</li>
 <ul>
 <li><code>excluded_objects</code>: An array of strings listing the names of excluded objects.</li>
 <li><code>current_object</code>: The name of the object currently being printed.</li>
+</ul>
+<h2 id="extruder_stepper">extruder_stepper<a class="headerlink" href="#extruder_stepper" title="Permanent link">&para;</a></h2>
+<p>The following information is available for extruder_stepper objects (as well as
+<a href="Config_Reference.html#extruder">extruder</a> objects):</p>
+<ul>
+<li><code>pressure_advance</code>: The current <a href="Pressure_Advance.html">pressure advance</a> value.</li>
+<li><code>smooth_time</code>: The current pressure advance smooth time.</li>
 </ul>
 <h2 id="fan">fan<a class="headerlink" href="#fan" title="Permanent link">&para;</a></h2>
 <p>The following information is available in
@@ -2296,6 +2331,19 @@ object is always available):</p>
   state. Possible values are: "ready", "startup", "shutdown", "error".</li>
 <li><code>state_message</code>: A human readable string giving additional context
   on the current Klipper state.</li>
+</ul>
+<h2 id="z_thermal_adjust">z_thermal_adjust<a class="headerlink" href="#z_thermal_adjust" title="Permanent link">&para;</a></h2>
+<p>The following information is available in the <code>z_thermal_adjust</code> object (this
+object is available if <a href="Config_Reference.html#z_thermal_adjust">z_thermal_adjust</a>
+is defined).</p>
+<ul>
+<li><code>enabled</code>: Returns True if adjustment is enabled.</li>
+<li><code>temperature</code>: Current (smoothed) temperature of the defined sensor. [degC]</li>
+<li><code>measured_min_temp</code>: Minimum measured temperature. [degC]</li>
+<li><code>measured_max_temp</code>: Maximum measured temperature. [degC]</li>
+<li><code>current_z_adjust</code>: Last computed Z adjustment [mm].</li>
+<li><code>z_adjust_ref_temperature</code>: Current reference temperature used for calculation
+  of Z <code>current_z_adjust</code> [degC].</li>
 </ul>
 <h2 id="z_tilt">z_tilt<a class="headerlink" href="#z_tilt" title="Permanent link">&para;</a></h2>
 <p>The following information is available in the <code>z_tilt</code> object (this
