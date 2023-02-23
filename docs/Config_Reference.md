@@ -3197,6 +3197,9 @@ run_current:
 #   so by default StallGuard and CoolStep are completely disabled while not
 #   homing. Set this value in order to be able to use CoolStep.
 #   This field is also known as TCOOLTHRS.
+#homing_vcoolthrs:
+#   Same as `vcoolthrs`, except it is applied only during the homing move.
+#   If not specified, it defaults to `vcoolthrs`.
 #driver_MSLUT0: 2863314260
 #driver_MSLUT1: 1251300522
 #driver_MSLUT2: 608774441
@@ -3375,6 +3378,9 @@ run_current:
 #   so by default StallGuard and CoolStep are completely disabled while not
 #   homing. Set this value in order to be able to use CoolStep.
 #   This field is also known as TCOOLTHRS.
+#homing_vcoolthrs:
+#   Same as `vcoolthrs`, except it is applied only during the homing move.
+#   If not specified, it defaults to `vcoolthrs`.
 #uart_address:
 #   The address of the TMC2209 chip for UART messages (an integer
 #   between 0 and 3). This is typically used when multiple TMC2209
@@ -3684,6 +3690,9 @@ run_current:
 #   so by default StallGuard and CoolStep are completely disabled while not
 #   homing. Set this value in order to be able to use CoolStep.
 #   This field is also known as TCOOLTHRS.
+#homing_vcoolthrs:
+#   Same as `vcoolthrs`, except it is applied only during the homing move.
+#   If not specified, it defaults to `vcoolthrs`.
 #driver_MSLUT0: 2863314260
 #driver_MSLUT1: 1251300522
 #driver_MSLUT2: 608774441
