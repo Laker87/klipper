@@ -6440,6 +6440,9 @@ cs_pin:
 #   define the stepper position in the chain and the total chain length.
 #   Position 1 corresponds to the stepper that connects to the MOSI signal.
 #   The default is to not use an SPI daisy chain.
+#tmc_frequency: 13200000
+#   Configure if an external clock oscillator is connected to the TMC driver
+#   clock input.
 #interpolate: True
 #   If true, enable step interpolation (the driver will internally
 #   step at a rate of 256 micro-steps). This interpolation does
@@ -6453,6 +6456,13 @@ run_current:
 #   when the stepper is not moving. Setting a hold_current is not
 #   recommended (see TMC_Drivers.md for details). The default is to
 #   not reduce the current.
+#homing_current:
+#   The amount of current (in amps RMS) to configure the driver to use
+#   when the stepper is performing a homing move. It can be useful for TMC
+#   drivers if the run current is too high or too low and it causes StallGuard
+#   to perform poorly. It can also be used as a safety measure so the printer
+#   can&#39;t damage itself if homing fails.
+#   The default is to not adjust the driver currents during homing.
 #sense_resistor: 0.110
 #   The resistance (in ohms) of the motor sense resistor. The default
 #   is 0.110 ohms.
@@ -6461,6 +6471,25 @@ run_current:
 #   set, &quot;stealthChop&quot; mode will be enabled if the stepper motor
 #   velocity is below this value. The default is 0, which disables
 #   &quot;stealthChop&quot; mode.
+#   This field is also known as vpwmthrs or TPWMTHRS.
+#vhigh:
+#   The velocity (in mm/s) to set the &quot;high velocity&quot; threshold to. When
+#   set, &quot;stealthChop&quot; mode will be disabled if the stepper motor
+#   velocity is above this value. StallGuard and CoolStep will also get
+#   disabled above this velocity. The default value is equivalent to
+#   infinity (thigh = 0).
+#   This field is also known as THIGH.
+#vcoolthrs:
+#   The velocity (in mm/s) to set the StallGuard (and CoolStep) minimum
+#   threshold. When set, StallGuard and CoolStep will be disabled if the
+#   stepper motor velocity is below this value. This value only applies while
+#   not homing. The default value is equivalent to infinity (tcoolthrs = 0),
+#   so by default StallGuard and CoolStep are completely disabled while not
+#   homing. Set this value in order to be able to use CoolStep.
+#   This field is also known as TCOOLTHRS.
+#homing_vcoolthrs:
+#   Same as `vcoolthrs`, except it is applied only during the homing move.
+#   If not specified, it defaults to `vcoolthrs`.
 #driver_MSLUT0: 2863314260
 #driver_MSLUT1: 1251300522
 #driver_MSLUT2: 608774441
@@ -6491,11 +6520,27 @@ run_current:
 #driver_TOFF: 4
 #driver_HEND: 7
 #driver_HSTRT: 0
+#driver_FD3: 0
+#driver_DISFDCC: 0
+#driver_RNDTF: 0
+#driver_CHM: 0
+#driver_VHIGHFS: 0
+#driver_VHIGHCHM: 0
+#driver_SYNC: 0
+#driver_DISS2G: 0
 #driver_PWM_AUTOSCALE: True
+#driver_PWM_SYMMETRIC: False
 #driver_PWM_FREQ: 1
+#driver_FREEWHEEL: 0
 #driver_PWM_GRAD: 4
 #driver_PWM_AMPL: 128
 #driver_SGT: 0
+#driver_SEMIN: 0
+#driver_SEUP: 0
+#driver_SEMAX: 0
+#driver_SEDN: 0
+#driver_SEIMIN: 0
+#driver_SFILT: 0
 #   Set the given register during the configuration of the TMC2130
 #   chip. This may be used to set custom motor parameters. The
 #   defaults for each parameter are next to the parameter name in the
@@ -6530,6 +6575,9 @@ uart_pin:
 #   A comma separated list of pins to set prior to accessing the
 #   tmc2208 UART. This may be useful for configuring an analog mux for
 #   UART communication. The default is to not configure any pins.
+#tmc_frequency: 12000000
+#   Configure if an external clock oscillator is connected to the TMC driver
+#   clock input.
 #interpolate: True
 #   If true, enable step interpolation (the driver will internally
 #   step at a rate of 256 micro-steps). This interpolation does
@@ -6543,6 +6591,13 @@ run_current:
 #   when the stepper is not moving. Setting a hold_current is not
 #   recommended (see TMC_Drivers.md for details). The default is to
 #   not reduce the current.
+#homing_current:
+#   The amount of current (in amps RMS) to configure the driver to use
+#   when the stepper is performing a homing move. It can be useful for TMC
+#   drivers if the run current is too high or too low and it causes StallGuard
+#   to perform poorly. It can also be used as a safety measure so the printer
+#   can&#39;t damage itself if homing fails.
+#   The default is to not adjust the driver currents during homing.
 #sense_resistor: 0.110
 #   The resistance (in ohms) of the motor sense resistor. The default
 #   is 0.110 ohms.
@@ -6551,17 +6606,21 @@ run_current:
 #   set, &quot;stealthChop&quot; mode will be enabled if the stepper motor
 #   velocity is below this value. The default is 0, which disables
 #   &quot;stealthChop&quot; mode.
+#   This field is also known as vpwmthrs or TPWMTHRS.
 #driver_IHOLDDELAY: 8
 #driver_TPOWERDOWN: 20
 #driver_TBL: 2
 #driver_TOFF: 3
 #driver_HEND: 0
 #driver_HSTRT: 5
+#driver_DISS2G: 0
+#driver_DISS2VS: 0
 #driver_PWM_AUTOGRAD: True
 #driver_PWM_AUTOSCALE: True
 #driver_PWM_LIM: 12
 #driver_PWM_REG: 8
 #driver_PWM_FREQ: 1
+#driver_FREEWHEEL: 0
 #driver_PWM_GRAD: 14
 #driver_PWM_OFS: 36
 #   Set the given register during the configuration of the TMC2208
@@ -6579,12 +6638,33 @@ by the name of the corresponding stepper config section (for example,
 uart_pin:
 #tx_pin:
 #select_pins:
+#tmc_frequency: 12000000
+#   Configure if an external clock oscillator is connected to the TMC driver
+#   clock input.
 #interpolate: True
 run_current:
 #hold_current:
+#homing_current:
+#   The amount of current (in amps RMS) to configure the driver to use
+#   when the stepper is performing a homing move. It can be useful for TMC
+#   drivers if the run current is too high or too low and it causes StallGuard
+#   to perform poorly. It can also be used as a safety measure so the printer
+#   can&#39;t damage itself if homing fails.
+#   The default is to not adjust the driver currents during homing.
 #sense_resistor: 0.110
 #stealthchop_threshold: 0
 #   See the &quot;tmc2208&quot; section for the definition of these parameters.
+#vcoolthrs:
+#   The velocity (in mm/s) to set the StallGuard (and CoolStep) minimum
+#   threshold. When set, StallGuard and CoolStep will be disabled if the
+#   stepper motor velocity is below this value. This value only applies while
+#   not homing. The default value is equivalent to infinity (tcoolthrs = 0),
+#   so by default StallGuard and CoolStep are completely disabled while not
+#   homing. Set this value in order to be able to use CoolStep.
+#   This field is also known as TCOOLTHRS.
+#homing_vcoolthrs:
+#   Same as `vcoolthrs`, except it is applied only during the homing move.
+#   If not specified, it defaults to `vcoolthrs`.
 #uart_address:
 #   The address of the TMC2209 chip for UART messages (an integer
 #   between 0 and 3). This is typically used when multiple TMC2209
@@ -6595,14 +6675,22 @@ run_current:
 #driver_TOFF: 3
 #driver_HEND: 0
 #driver_HSTRT: 5
+#driver_DISS2G: 0
+#driver_DISS2VS: 0
 #driver_PWM_AUTOGRAD: True
 #driver_PWM_AUTOSCALE: True
 #driver_PWM_LIM: 12
 #driver_PWM_REG: 8
 #driver_PWM_FREQ: 1
+#driver_FREEWHEEL: 0
 #driver_PWM_GRAD: 14
 #driver_PWM_OFS: 36
 #driver_SGTHRS: 0
+#driver_SEMIN: 0
+#driver_SEUP: 0
+#driver_SEMAX: 0
+#driver_SEDN: 0
+#driver_SEIMIN: 0
 #   Set the given register during the configuration of the TMC2209
 #   chip. This may be used to set custom motor parameters. The
 #   defaults for each parameter are next to the parameter name in the
@@ -6646,6 +6734,13 @@ cs_pin:
 run_current:
 #   The amount of current (in amps RMS) used by the driver during
 #   stepper movement. This parameter must be provided.
+#homing_current:
+#   The amount of current (in amps RMS) to configure the driver to use
+#   when the stepper is performing a homing move. It can be useful for TMC
+#   drivers if the run current is too high or too low and it causes StallGuard
+#   to perform poorly. It can also be used as a safety measure so the printer
+#   can&#39;t damage itself if homing fails.
+#   The default is to not adjust the driver currents during homing.
 #sense_resistor:
 #   The resistance (in ohms) of the motor sense resistor. This
 #   parameter must be provided.
@@ -6825,6 +6920,9 @@ cs_pin:
 #   define the stepper position in the chain and the total chain length.
 #   Position 1 corresponds to the stepper that connects to the MOSI signal.
 #   The default is to not use an SPI daisy chain.
+#tmc_frequency: 12000000
+#   Configure if an external clock oscillator is connected to the TMC driver
+#   clock input.
 #interpolate: True
 #   If true, enable step interpolation (the driver will internally
 #   step at a rate of 256 micro-steps). The default is True.
@@ -6836,6 +6934,13 @@ run_current:
 #   when the stepper is not moving. Setting a hold_current is not
 #   recommended (see TMC_Drivers.md for details). The default is to
 #   not reduce the current.
+#homing_current:
+#   The amount of current (in amps RMS) to configure the driver to use
+#   when the stepper is performing a homing move. It can be useful for TMC
+#   drivers if the run current is too high or too low and it causes StallGuard
+#   to perform poorly. It can also be used as a safety measure so the printer
+#   can&#39;t damage itself if homing fails.
+#   The default is to not adjust the driver currents during homing.
 #sense_resistor: 0.075
 #   The resistance (in ohms) of the motor sense resistor. The default
 #   is 0.075 ohms.
@@ -6844,6 +6949,25 @@ run_current:
 #   set, &quot;stealthChop&quot; mode will be enabled if the stepper motor
 #   velocity is below this value. The default is 0, which disables
 #   &quot;stealthChop&quot; mode.
+#   This field is also known as vpwmthrs or TPWMTHRS.
+#vhigh:
+#   The velocity (in mm/s) to set the &quot;high velocity&quot; threshold to. When
+#   set, &quot;stealthChop&quot; mode will be disabled if the stepper motor
+#   velocity is above this value. StallGuard and CoolStep will also get
+#   disabled above this velocity. The default value is equivalent to
+#   infinity (thigh = 0).
+#   This field is also known as THIGH.
+#vcoolthrs:
+#   The velocity (in mm/s) to set the StallGuard (and CoolStep) minimum
+#   threshold. When set, StallGuard and CoolStep will be disabled if the
+#   stepper motor velocity is below this value. This value only applies while
+#   not homing. The default value is equivalent to infinity (tcoolthrs = 0),
+#   so by default StallGuard and CoolStep are completely disabled while not
+#   homing. Set this value in order to be able to use CoolStep.
+#   This field is also known as TCOOLTHRS.
+#homing_vcoolthrs:
+#   Same as `vcoolthrs`, except it is applied only during the homing move.
+#   If not specified, it defaults to `vcoolthrs`.
 #driver_MSLUT0: 2863314260
 #driver_MSLUT1: 1251300522
 #driver_MSLUT2: 608774441
