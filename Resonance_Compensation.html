@@ -1337,6 +1337,20 @@
   
   
     <li class="md-nav__item">
+      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
         TSL1401CL filament width sensor
       </a>
@@ -1910,34 +1924,17 @@ good idea to check and re-measure the ringing frequencies as described in
 <a href="#ringing-frequency">Ringing frequency</a> section and update your config file
 if necessary.</p>
 <h3 id="is-dual-carriage-setup-supported-with-input-shapers">Is dual carriage setup supported with input shapers?<a class="headerlink" href="#is-dual-carriage-setup-supported-with-input-shapers" title="Permanent link">&para;</a></h3>
-<p>Yes. One should run the tuning twice for each of the carriages, and calculate
-the ringing frequencies for each of the carriages independently.</p>
-<p>Afterwards, put the values for carriage 0 and carriage 1 into [input_shaper]
-section as follows. Let's assume that dual_carriage (carriage 1) moves along
-axis <code>&lt;dc_axis&gt;</code> (as configured by <code>[dual_carriage]</code> section). We assume that
-the frequency and the shaper for carriage 0 and carriage 1 may differ for
-<code>&lt;dc_axis&gt;</code>, but they are more or less equal for both carriages for the other
-axis (check the belts tension if they aren't equal). Then, put the following
-into your config:</p>
-<div class="highlight"><pre><span></span><code>[input_shaper]
-shaper_type_x: &lt;carriage_0_x_shaper&gt;
-shaper_freq_x: &lt;carriage_0_x_frequency&gt;
-shaper_type_y: &lt;carriage_0_y_shaper&gt;
-shaper_freq_y: &lt;carriage_0_y_frequency&gt;
-shaper_type_dc: &lt;carriage_1_dc_axis_shaper&gt;
-shaper_freq_dc: &lt;carriage_1_dc_axis_frequency&gt;
-</code></pre></div>
-
-<p>If you must configure both X and Y axes shapers independently for both
-carriages, then you can put the values for carriage 0 into
+<p>There is no dedicated support for dual carriages with input shapers, but it does
+not mean this setup will not work. One should run the tuning twice for each
+of the carriages, and calculate the ringing frequencies for X and Y axes for
+each of the carriages independently. Then put the values for carriage 0 into
 [input_shaper] section, and change the values on the fly when changing
 carriages, e.g. as a part of some macro:</p>
 <div class="highlight"><pre><span></span><code>SET_DUAL_CARRIAGE CARRIAGE=1
 SET_INPUT_SHAPER SHAPER_FREQ_X=... SHAPER_FREQ_Y=...
 </code></pre></div>
 
-<p>And similarly when switching back to carriage 0. However, this will
-not work for IDEX setups in copy or mirror modes.</p>
+<p>And similarly when switching back to carriage 0.</p>
 <h3 id="does-input_shaper-affect-print-time">Does input_shaper affect print time?<a class="headerlink" href="#does-input_shaper-affect-print-time" title="Permanent link">&para;</a></h3>
 <p>No, <code>input_shaper</code> feature has pretty much no impact on the print times by
 itself. However, the value of <code>max_accel</code> certainly does (tuning of this

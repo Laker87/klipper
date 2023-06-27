@@ -2781,6 +2781,20 @@
   
   
     <li class="md-nav__item">
+      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
         TSL1401CL filament width sensor
       </a>
@@ -5030,18 +5044,13 @@ been enabled (also see the
 <p><code>SET_INPUT_SHAPER [SHAPER_FREQ_X=&lt;shaper_freq_x&gt;]
 [SHAPER_FREQ_Y=&lt;shaper_freq_y&gt;] [DAMPING_RATIO_X=&lt;damping_ratio_x&gt;]
 [DAMPING_RATIO_Y=&lt;damping_ratio_y&gt;] [SHAPER_TYPE=&lt;shaper&gt;]
-[SHAPER_TYPE_X=&lt;shaper_type_x&gt;] [SHAPER_TYPE_Y=&lt;shaper_type_y&gt;]
-[SHAPER_FREQ_DC=&lt;shaper_freq_dc&gt;] [DAMPING_RATIO_DC=&lt;damping_ratio_dc&gt;]
-[SHAPER_TYPE_DC=&lt;shaper_type_dc&gt;]</code>:
+[SHAPER_TYPE_X=&lt;shaper_type_x&gt;] [SHAPER_TYPE_Y=&lt;shaper_type_y&gt;]</code>:
 Modify input shaper parameters. Note that SHAPER_TYPE parameter resets
 input shaper for both X and Y axes even if different shaper types have
 been configured in [input_shaper] section. SHAPER_TYPE cannot be used
 together with either of SHAPER_TYPE_X and SHAPER_TYPE_Y parameters.
 See <a href="Config_Reference.html#input_shaper">config reference</a> for more
-details on each of these parameters. Note that <code>SHAPER_FREQ_DC</code>,
-<code>SHAPER_TYPE_DC</code> and <code>DAMPING_RATIO_DC</code> parameters that change the input
-shaper for the dual carriage are available only if <code>shaper_freq_dc</code>
-was set in <code>[input_shaper]</code> section.</p>
+details on each of these parameters.</p>
 <h3 id="manual_probe">[manual_probe]<a class="headerlink" href="#manual_probe" title="Permanent link">&para;</a></h3>
 <p>The manual_probe module is automatically loaded.</p>
 <h4 id="manual_probe_1">MANUAL_PROBE<a class="headerlink" href="#manual_probe_1" title="Permanent link">&para;</a></h4>
