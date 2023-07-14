@@ -925,6 +925,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dual-carriage" class="md-nav__link">
+    Dual carriage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#max-smoothing" class="md-nav__link">
     Max smoothing
   </a>
@@ -1464,20 +1471,6 @@
   
   
     <li class="md-nav__item">
-      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
-        CANBUS Troubleshooting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
         TSL1401CL filament width sensor
       </a>
@@ -1747,6 +1740,13 @@
           <li class="md-nav__item">
   <a href="#bed-slinger-printers" class="md-nav__link">
     Bed-slinger printers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-carriage" class="md-nav__link">
+    Dual carriage
   </a>
   
 </li>
@@ -2421,6 +2421,29 @@ probe_points: ...
 debugging.]</p>
 <p>Then the commands <code>TEST_RESONANCES AXIS=X</code> and <code>TEST_RESONANCES AXIS=Y</code>
 will use the correct accelerometer for each axis.</p>
+<h3 id="dual-carriage">Dual carriage<a class="headerlink" href="#dual-carriage" title="Permanent link">&para;</a></h3>
+<p>If your printer has a dual carriage, you will need to measure the resonances
+for both of them on the axis that corresponds to the dual carriage axis, i.e.</p>
+<div class="highlight"><pre><span></span><code>[dual_carriage]
+axis: &lt;dual_carriage_axis&gt;
+</code></pre></div>
+
+<p>In order to do that, the accelerometer must either be moved between the two
+toolheads for the test, or two accelerometers could be connected simultaneously,
+similar to a bed-slinger printers.</p>
+<p>First, run <code>TEST_RESONANCES AXIS=&lt;dual_carriage_axis&gt;</code> with the first (0)
+carriage activated, then re-mount the accelerometer or configure the second
+accelerometer, active the second (1) carriage, and repeat the test
+<code>TEST_RESONANCES AXIS=&lt;dual_carriage_axis&gt;</code>. The test for the other (non-dual)
+axis can be run with either of the carriages activated.</p>
+<p>Process both results independently, and put the results for the first (0)
+carriage as usual, and for the second (1) carriage as follows:</p>
+<div class="highlight"><pre><span></span><code>[input_shaper]
+...
+shaper_type_dc: ...
+shaper_freq_dc: ...
+</code></pre></div>
+
 <h3 id="max-smoothing">Max smoothing<a class="headerlink" href="#max-smoothing" title="Permanent link">&para;</a></h3>
 <p>Keep in mind that the input shaper can create some smoothing in parts.
 Automatic tuning of the input shaper performed by <code>calibrate_shaper.py</code>
